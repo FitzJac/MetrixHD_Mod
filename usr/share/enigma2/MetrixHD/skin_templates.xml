@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skin>
+
+<screen name="FullScreenTemplate">
+    <eLabel backgroundColor="Background" position="0,0" size="1280,720" zPosition="-10"/>
+</screen>
+
+<screen name="TitleTemplate">
+    <widget backgroundColor="Background" font="Regular;30" position="20,35" render="Label" size="825,35" source="Title" transparent="1"/>
+</screen> 
+
+<screen name="TextTemplate">
+    <widget name="text" backgroundColor="Background" font="Regular;30" position="20,35" size="825,35" transparent="1"/>
+</screen>
+
+<screen name="ConfigTemplate">
+    <widget name="config" backgroundColor="Background" font="Regular;26" itemHeight="30" enableWrapAround="1" position="20,90" scrollbarMode="showNever" size="610,510" transparent="1"/>
+</screen>
+
+<screen name="DescriptionTemplate">
+    <widget name="description" backgroundColor="Background" font="Regular;26" position="650,90" size="610,425"/>
+</screen>
+
+<screen name="MenuTemplate">
+    <eLabel backgroundColor="Background" position="0,0" size="490,720" transparent="0" zPosition="-1"/>
+    <widget enableWrapAround="1" position="20,100" render="Listbox" scrollbarMode="showNever" size="450,540" source="menu" transparent="1">
+      <convert type="TemplatedMultiContent">
+                                {"template": [ MultiContentEntryText(pos = (20, 5), size = (450, 50), flags = RT_HALIGN_LEFT, text = 0) ],
+                                "fonts": [gFont("Regular", 30)],
+                                "itemHeight": 60
+                                }
+                        </convert>
+    </widget>
+</screen>
+
+<screen name="ClockTemplate">
+    <eLabel position="1005,10" zPosition="-2" size="280,70" backgroundColor="Background"/>
+    <widget backgroundColor="Background" font="Regular;60" foregroundColor="white" halign="left" position="1125,10" render="Label" size="170,70" source="global.CurrentTime" transparent="1" zPosition="4">
+     <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget backgroundColor="Background" font="Regular;20" foregroundColor="white" halign="left" position="1020,20" render="Label" size="125,30" source="global.CurrentTime" transparent="1" zPosition="4">
+     <convert type="ClockToText">Format:%A</convert>
+    </widget>
+    <widget backgroundColor="Background" font="Regular;20" foregroundColor="white" halign="left" position="1020,45" render="Label" size="148,29" source="global.CurrentTime" transparent="1" zPosition="4">
+     <convert type="ClockToText">Format:%d %B</convert>
+    </widget>
+</screen>
+
+<!-- /*Buttons-->
+<screen name="ButtonRed">
+    <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/key_red.png" position="125,660" size="30,30"/>
+</screen>
+
+<screen name="ButtonGreen">
+    <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/key_green.png" position="325,660" size="30,30"/>
+</screen>
+
+<screen name="ButtonYellow">
+    <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/key_yellow.png" position="525,660" size="30,30"/>
+</screen>
+
+<screen name="ButtonBlue">
+    <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/key_blue.png" position="725,660" size="30,30"/>
+</screen>
+
+<screen name="ButtonTemplate_R">
+    <panel name="ButtonRed"/>
+    <widget name="key_red" backgroundColor="Background" font="Regular;26" halign="left" position="165,660" size="140,30" transparent="1" zPosition="1"/>
+</screen>
+
+<screen name="ButtonTemplate_G">
+    <panel name="ButtonGreen"/>
+    <widget name="key_green" backgroundColor="Background" font="Regular;26" halign="left" position="365,660" size="140,30" transparent="1" zPosition="1"/>
+</screen>
+
+<screen name="ButtonTemplate_Y">
+    <panel name="ButtonYellow"/>
+    <widget name="key_yellow" backgroundColor="Background" font="Regular;26" halign="left" position="565,660" size="140,30" transparent="1" zPosition="1"/>
+</screen>
+
+<screen name="ButtonTemplate_B">
+    <panel name="ButtonBlue"/>
+    <widget name="key_blue" backgroundColor="Background" font="Regular;26" halign="left" position="765,660" size="140,30" transparent="1" zPosition="1"/>
+</screen>
+
+<screen name="ButtonTemplate_RG">
+    <panel name="ButtonTemplate_R"/>
+    <panel name="ButtonTemplate_G"/>
+</screen>
+
+<screen name="ButtonTemplate_RGY">
+    <panel name="ButtonTemplate_RG"/>
+    <panel name="ButtonTemplate_Y"/>
+</screen>
+
+<screen name="ButtonTemplate_RGYB">
+    <panel name="ButtonTemplate_RGY"/>
+    <panel name="ButtonTemplate_B"/>
+</screen>
+
+<screen name="ButtonTemplate_RB">
+    <panel name="ButtonTemplate_R"/>
+    <panel name="ButtonTemplate_B"/>
+</screen>
+
+<screen name="ButtonTemplate_YB">
+    <panel name="ButtonTemplate_Y"/>
+    <panel name="ButtonTemplate_B"/>
+</screen>
+
+<screen name="ButtonTemplate_RGB">
+    <panel name="ButtonTemplate_RG"/>
+    <panel name="ButtonTemplate_B"/>
+</screen>
+
+<screen name="ButtonTemplate_RS">
+    <panel name="ButtonRed"/>
+    <widget source="key_red" render="Label" backgroundColor="Background" font="Regular;26" halign="left" position="165,660" size="140,30" transparent="1" zPosition="1"/>
+</screen>
+
+<screen name="ButtonTemplate_GS">
+    <panel name="ButtonGreen"/>
+    <widget source="key_green" render="Label" backgroundColor="Background" font="Regular;26" halign="left" position="365,660" size="140,30" transparent="1" zPosition="1"/>
+</screen>
+
+<screen name="ButtonTemplate_YS">
+    <panel name="ButtonYellow"/>
+    <widget source="key_yellow" render="Label" backgroundColor="Background" font="Regular;26" halign="left" position="565,660" size="140,30" transparent="1" zPosition="1"/>
+</screen>
+
+<screen name="ButtonTemplate_BS">
+    <panel name="ButtonBlue"/>
+    <widget source="key_blue" render="Label" backgroundColor="Background" font="Regular;26" halign="left" position="765,660" size="140,30" transparent="1" zPosition="1"/>
+</screen>
+
+<screen name="ButtonTemplate_RGS">
+    <panel name="ButtonTemplate_RS"/>
+    <panel name="ButtonTemplate_GS"/>
+</screen>
+
+<screen name="ButtonTemplate_RGYS">
+    <panel name="ButtonTemplate_RGS"/>
+    <panel name="ButtonTemplate_YS"/>
+</screen>
+
+<screen name="ButtonTemplate_RGYBS">
+    <panel name="ButtonTemplate_RGYS"/>
+    <panel name="ButtonTemplate_BS"/>
+</screen>
+
+<screen name="ButtonTemplate_RYS">
+    <panel name="ButtonTemplate_RS"/>
+    <panel name="ButtonTemplate_YS"/>
+</screen>
+
+<screen name="ButtonTemplate_RBS">
+    <panel name="ButtonTemplate_RS"/>
+    <panel name="ButtonTemplate_BS"/>
+</screen>
+
+<screen name="ButtonTemplate_RGBS">
+    <panel name="ButtonTemplate_RGS"/>
+    <panel name="ButtonTemplate_BS"/>
+</screen>
+
+<screen name="ButtonTemplate_YBS">
+    <panel name="ButtonTemplate_YS"/>
+    <panel name="ButtonTemplate_BS"/>
+</screen>
+
+<screen name="ButtonMenuTemplate">
+    <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/key_menu.png" position="925,660" size="30,30"/>
+    <eLabel backgroundColor="Background" font="Regular;26" halign="left" text="Menu" position="965,660" size="140,30" transparent="1" zPosition="1"/>
+</screen>
+
+<screen name="ButtonInfoTemplate">
+    <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/key_info.png" position="1125,660" size="30,30"/>
+    <eLabel backgroundColor="Background" font="Regular;26" halign="left" text="Info" position="1165,660" size="140,30" transparent="1" zPosition="1"/>
+</screen>
+
+<screen name="CancelTemplate">
+    <panel name="ButtonRed"/>
+    <widget name="canceltext" backgroundColor="Background" font="Regular;26" halign="left" position="165,660" size="140,30" transparent="1" zPosition="1"/>
+</screen>
+
+<screen name="OKTemplate">
+    <panel name="ButtonGreen"/>
+    <widget name="oktext" backgroundColor="Background" font="Regular;26" halign="left" position="365,660" size="140,30" transparent="1" zPosition="1"/>
+</screen>
+
+<screen name="CancelOKTemplate">
+    <panel name="CancelTemplate"/>
+    <panel name="OKTemplate"/>
+</screen>
+
+</skin>
