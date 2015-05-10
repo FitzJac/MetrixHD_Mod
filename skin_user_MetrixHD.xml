@@ -1302,7 +1302,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		</applet>
   </screen>
 
-  <screen backgroundColor="transparent" flags="wfNoBorder" name="MovieContextMenu" position="center,center" size="1280,720" title="Movielist menu">
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="MovieContextMenu" position="center,center" size="1280,720" title="Movie list menu">
     <panel name="ClockTemplate"/>
     <eLabel backgroundColor="Background" position="0,0" size="490,720" transparent="0" zPosition="-1"/>
     <eLabel backgroundColor="Background" font="Regular;30" position="20,35" size="450,35" text="Movielist menu" transparent="1"/>
@@ -1315,7 +1315,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <panel name="ConfigTemplate"/>
     <panel name="DescriptionTemplate"/>
     <panel name="ButtonTemplate_G"/>
-    <eLabel backgroundColor="Background" font="Regular;30" position="20,35" size="450,35" text="Movie List Configuration" transparent="1"/> 
+    <eLabel backgroundColor="Background" font="Regular;30" position="20,35" size="450,35" text="Movie list configuration" transparent="1"/> 
   </screen>
 
   <screen backgroundColor="transparent" flags="wfNoBorder" name="PVRState" position="180,100" size="850,325" zPosition="10">
